@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/my-template.js"></script>
+</head>
+
+<body>
+    <div id="user-box">
+
+    </div>
+    <script type="text/html" id="user">
+        <div>姓名：{{name}}</div>
+        <div>年龄：{{age}}</div>
+    </script>
+    <script>
+        var data = {
+            name: "zhangs",
+            age: 20
+        };
+        var res = myTemplate("user", data);
+        console.log(res);
+        document.getElementById("user-box").innerHTML = res;
+    </script>
+</body>
+
+</html>
